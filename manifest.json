@@ -1,0 +1,20 @@
+{
+    "name": "דשבורד מדריכי AI",
+    "short_name": "AI Guides",
+    "description": "המדריך המקיף לעולם הבינה המלאכותית - 130 מדריכים, 300 מונחים",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#0c0c1d",
+    "theme_color": "#6c5ce7",
+    "orientation": "any",
+    "lang": "he",
+    "dir": "rtl",
+    "icons": [
+        {
+            "src": "icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
