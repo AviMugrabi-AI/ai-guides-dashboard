@@ -1,7 +1,8 @@
 // ===== MEGA FEATURES - Taking it to the MAX =====
 
-// ===== CURSOR TRAIL EFFECT =====
+// ===== CURSOR TRAIL EFFECT (desktop only) =====
 (function() {
+    if ('ontouchstart' in window || window.innerWidth < 768) return;
     const trail = [];
     const trailLength = 12;
     for (let i = 0; i < trailLength; i++) {
