@@ -1137,3 +1137,290 @@ body.light-mode .section-title { color: #2d3436; }
 .comparison-table tr:hover td {
     background: rgba(108,92,231,0.05);
 }
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+/* Touch-friendly */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .main-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+
+    .search-bar input {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .category-nav {
+        padding: 0.8rem;
+        gap: 0.3rem;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .nav-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .stat-card {
+        padding: 0.8rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .dashboard {
+        padding: 0.8rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .card-body h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-body > p {
+        font-size: 0.9rem;
+    }
+
+    .key-terms {
+        gap: 0.3rem;
+    }
+
+    .term {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .expand-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .expanded-content {
+        font-size: 0.9rem;
+    }
+
+    .expanded-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .expanded-content li {
+        font-size: 0.85rem;
+    }
+
+    /* News ticker mobile */
+    .news-ticker {
+        max-height: 250px;
+        padding: 1rem;
+    }
+
+    .ticker-item {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .ticker-date {
+        font-size: 0.7rem;
+    }
+
+    .ticker-text {
+        font-size: 0.8rem;
+    }
+
+    /* Glossary panel mobile */
+    .glossary-panel {
+        width: 85%;
+        left: -85%;
+    }
+
+    .glossary-toggle {
+        bottom: 1rem;
+        left: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Theme toggle mobile */
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    /* Random button mobile */
+    .random-btn {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Progress bar mobile */
+    .progress-bar-container {
+        padding: 0 1rem;
+    }
+
+    /* Footer mobile */
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Table mobile */
+    .comparison-table {
+        font-size: 0.7rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.4rem;
+    }
+
+    /* Timeline mobile */
+    .timeline::before {
+        right: 10px;
+    }
+
+    .timeline-item {
+        padding-right: 35px;
+    }
+
+    .timeline-item::before {
+        right: 5px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-year {
+        font-size: 0.8rem;
+        min-width: 45px;
+    }
+
+    .timeline-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+    .main-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .nav-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard {
+        padding: 1.5rem;
+    }
+}
+
+/* Touch improvements */
+@media (hover: none) {
+    .guide-card:hover {
+        transform: none;
+        box-shadow: var(--card-shadow);
+    }
+
+    .nav-btn:hover {
+        background: transparent;
+    }
+
+    .nav-btn.active {
+        background: var(--primary);
+    }
+
+    .expand-btn {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quiz-option {
+        min-height: 48px;
+    }
+}
+
+/* Safe area for notched phones */
+@supports (padding: env(safe-area-inset-top)) {
+    .main-header {
+        padding-top: calc(1.5rem + env(safe-area-inset-top));
+    }
+
+    .category-nav {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    footer {
+        padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+    }
+}
+
+/* Smooth scrolling on mobile */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
