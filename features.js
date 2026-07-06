@@ -64,7 +64,8 @@
 })();
 
 
-// ===== 3D CARD TILT EFFECT =====
+// ===== 3D CARD TILT EFFECT (desktop only) =====
+if (!('ontouchstart' in window)) {
 document.querySelectorAll('.guide-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -82,6 +83,7 @@ document.querySelectorAll('.guide-card').forEach(card => {
         card.style.transition = 'transform 0.5s ease';
     });
 });
+}
 
 // ===== SPLASH SCREEN =====
 (function() {
