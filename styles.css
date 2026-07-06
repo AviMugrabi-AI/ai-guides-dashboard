@@ -1424,3 +1424,27 @@ html {
 body {
     overflow-x: hidden;
 }
+
+/* ===== FOCUS MODE ===== */
+body.focus-mode .main-header,
+body.focus-mode .category-nav,
+body.focus-mode .stats-bar,
+body.focus-mode #xpBar,
+body.focus-mode #xpDisplay,
+body.focus-mode .theme-toggle,
+body.focus-mode .random-btn,
+body.focus-mode .glossary-toggle,
+body.focus-mode #backToTop,
+body.focus-mode .news-ticker,
+body.focus-mode footer,
+body.focus-mode #particles {
+    display: none !important;
+}
+
+body.focus-mode .dashboard {
+    padding-top: 1rem;
+}
+
+body.focus-mode .guide-card {
+    border-color: rgba(0,184,148,0.2);
+}
